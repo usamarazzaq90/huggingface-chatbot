@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const response = Hf.textGenerationStream({
-    model: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+    model: 'meta-llama/Llama-2-70b-chat-hf',
     inputs: experimental_buildOpenAssistantPrompt(messages),
     parameters: {
       max_new_tokens: 200,
